@@ -6,8 +6,8 @@
     <div class="gifs" v-if="gifs.length">
       <GifList :gifs="gifs" />
     </div>
-     <h1 class="trending-title" v-if="trending.length && gifs.length === 0">Trending</h1>
-    <div class="gifs" v-if="trending.length && gifs.length === 0">
+     <h3 class="trending-title" v-if="trending.length && gifs.length === 0 && query.length === 0">Trending</h3>
+    <div class="gifs" v-if="trending.length && gifs.length === 0 && query.length === 0">
 
 
       <TrendingList :gifs="trending" />
@@ -53,7 +53,6 @@ export default {
         `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}&rating=g`
       )
       .then(res => {
-        console.log(res.data.data);
         this.trending = res.data.data;
       })
       .catch(err => console.log(err));

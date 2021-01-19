@@ -16,13 +16,12 @@ body {
 }
 
 .navbar-brand {
-    color: #EE6C4D;
+    color: #EE6C4D!important;
 }
 
 .query {
     margin-top: -20px;
     margin-bottom: 1.5rem;
-    ;
 }
 
 a:hover {
@@ -119,6 +118,27 @@ a {
     height: 100%;
 }
 
+.btn-projects {
+    background: #EE6C4D;
+    color: #fff!important;
+    padding: .5rem .5rem;
+    transition: 250ms ease-out;
+}
+
+.btn-projects:hover {
+    background: #f35a34;
+}
+
+
+/* .nav-item {
+    margin-left: 2rem;
+} */
+
+
+/* .navbar-toggler-icon {
+    color: #fff!important;
+} */
+
 
 /*MEDIA QUERIES */
 
@@ -131,6 +151,10 @@ a {
 @media(max-width:786px) {
     .gifs {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .btn-projects {
+        background: none;
+        color: rgba(255, 255, 255, .55)!important;
     }
 }
 

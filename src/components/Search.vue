@@ -1,9 +1,9 @@
 <template>
-    <div class="search">
+    <form class="search" @submit.prevent="handleSearch">
         <input type="text" name="search" id="search" @input="searching" v-model="query"
         placeholder="Search all GIFS and Stickers">
-        <i class="fas fa-search"></i>
-    </div>
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
 
 </template>
 
@@ -32,11 +32,13 @@ export default {
             const limit = 9;
             axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${this.query}&limit=${limit}`)
             .then(res => {
-                console.log(res.data.data);
                 this.$emit('query', this.query);
                 this.$emit('fetch-data', res.data.data);
             })
             .catch(err => console.log(err));
+        },
+        handleSearch(){
+            this.onSearch();
         }
     }
 }
