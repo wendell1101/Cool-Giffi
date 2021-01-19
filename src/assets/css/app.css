@@ -156,6 +156,9 @@ a {
         background: none;
         color: rgba(255, 255, 255, .55)!important;
     }
+    .btn-projects:hover {
+        background: none!important;
+    }
 }
 
 @media(max-width:500px) {
