@@ -1,5 +1,7 @@
 # giphy
 
+DemoLink : https://coolgiffi.netlify.app
+
 ## Project setup
 ```
 yarn install
